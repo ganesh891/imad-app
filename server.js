@@ -9,6 +9,22 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/Article one', function(req,res){
+    res.send("Article one request is here and served here")}
+);
+
+app.get('/Article Two', function(req,res){
+    res.send("Article Two request is here and served here")}
+);
+
+app.get('/article Three', function(req,res){
+    res.send("Article Three request is here and served here")}
+);
+
+app.get('/article Four', function(req,res){
+    res.send("Article Four request is here and served here")}
+);
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
