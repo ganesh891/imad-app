@@ -14,18 +14,18 @@ app.get('/articleone', function(req,res){
     
 });
 
-app.get('/articletwo', function(req,res){
+app.get('/article-two', function(req,res){
     res.send('Article Two request is here and served here');
     
 });
 
-app.get('/articlethree', function(req,res)
+app.get('/article-three', function(req,res)
 {
     res.send('Article Three request is here and served here');
     
 });
 
-app.get('/articleFour', function(req,res){
+app.get('/article-Four', function(req,res){
     res.send('Article Four request is here and served here');
     
 });
