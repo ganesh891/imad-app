@@ -21,6 +21,30 @@ var articleone = {
                 </p>  `
     
 };
+ function createtemplate(data)
+ {
+var htmltemplate = `
+<html>
+    <head>
+        <title>${title} </title>
+        <meta name="viewport" content="width=device-width, inital-scale=1"/>
+    
+        </head>
+        <body>
+            <div class="container">
+            <div><a href='/'>Home</a>
+            </div>
+            <hr/>
+            <h3>${heading}</h3>
+            
+            <div>${date}</div>
+            
+            <div>
+              ${content}
+                
+            </div>`
+     
+ }
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
