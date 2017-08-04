@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone = {
+var articleone = 
+{
     title: 'article-one',
     heading: 'Article-one',
     date: '4 aug 2017',
@@ -18,7 +19,7 @@ var articleone = {
                 
                 <p>
                             The combination of BPM and microservices offers a new world of opportunity for organizations looking to digitalize their critical business processes. This section reviews the tools, techniques and technologies that are driving the ability of microservices to truly support BPM needs and explores how organizations can manage this relationship properly.
-                </p>  `
+                </p>`
     
 };
  function createTemplate(data){
@@ -33,6 +34,7 @@ var htmltemplate = `
     <head>
         <title>${title} </title>
         <meta name="viewport" content="width=device-width, inital-scale=1"/>
+    <link href="/ui/style.css" rel="stylesheet"/>
     
         </head>
         <body>
