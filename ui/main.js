@@ -10,7 +10,7 @@ element.innerHTML='New value';
 var img= document.getElementById('modi');
 var marginLeft=0;
 function moveRight(){
-    marginLeft=marginLeft+10;
+    marginLeft=marginLeft+5;
     img.style.marginLeft = marginLeft+px;
     }
     
