@@ -7,8 +7,8 @@ app.use(morgan('combined'));
 
 var articleone= 
 {
-    title: 'article-one',
-    heading: 'Article-one',
+    title: 'articleone',
+    heading: 'Articleone',
     date: '4 aug 2017',
     content: `   <p> 
                     This is a First content that we are served here and i am going to use a module on it 
@@ -63,7 +63,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req,res){
-   res.send(createTemplate(articleone));
+   res.send(createTemplate('articleone'));
 });
 
 app.get('/article-two', function(req,res){
