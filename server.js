@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
 
 
 
-counter=1;
+var counter=0;
 app.get('/count', function(req,res)
 {
    counter =counter+1;
