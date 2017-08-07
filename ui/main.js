@@ -16,6 +16,6 @@ var button=document.getElementById("counter");
                 }
             }
         }
-        request.open('GET','http://ganeshwizard777.imad.hasura-app.io/couter',true);
+        request.open('GET','http://ganeshwizard777.imad.hasura-app.io/counter',true);
         request.send(null);
     };
