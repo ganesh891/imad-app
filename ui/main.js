@@ -1,4 +1,4 @@
-/*console.log('Loaded!');
+console.log('Loaded!');
 
 
 var element = document.getElementById("main-text");
@@ -7,7 +7,7 @@ element.innerHTML='New value';
 
 //move the image
 
-var img= document.getElementById(`madi`);
+/*var img= document.getElementById(`madi`);
 var marginLeft=0;
 function moveRight(){
     marginLeft=marginLeft+5;
@@ -16,8 +16,8 @@ function moveRight(){
     
     img.onclick =function(){
         var interval= setInterval(moveRight,50);
-    };*/
-    
+    };
+    */
     
     var button=document.getElementById("counter");
     var counter=0;
