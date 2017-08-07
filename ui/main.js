@@ -1,9 +1,9 @@
-var button=document.getElementById("counter");
+var button=document.getElementById('counter');
     
     button.onclick = function()
     {
         
-        var request = new XmlHttpRequest();
+        var request = new XMLHttpRequest();
         
         request.onreadystatechange = function()
         {
