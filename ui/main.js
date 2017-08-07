@@ -15,7 +15,7 @@ var button=document.getElementById('counter');
                     span.innerHTML = counter.toString();
                 }
             }
-        }
+        };
         request.open('GET',`http://ganeshwizard777.imad.hasura-app.io/counter`,true);
         request.send(null);
     };
