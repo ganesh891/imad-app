@@ -63,9 +63,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
+
 
 
 counter=1;
@@ -75,9 +73,7 @@ app.get('/count', function(req,res)
    res.send(counter.tostring());
 });
 
-app.get('/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
+
 
 app.get('/articleone', function(req,res){
    res.send(createTemplate(articleone));
@@ -98,8 +94,13 @@ app.get('/article-Four', function(req,res){
     
 });
 
+app.get('/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
 
-
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
