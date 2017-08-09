@@ -29,3 +29,14 @@ button.onclick =function()
 var span = document.getElementById('count');
 span.innerHTML = counter.toString();
 };
+
+
+//submit a button
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function()
+{
+    
+};
