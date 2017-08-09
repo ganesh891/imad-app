@@ -157,11 +157,11 @@ app.get('/test-db', function(req,res){
 });
 
 
-var name=[];
+var names=[];
 app.get('/submit-name/:name', function (req, res)
 { 
     var name= res.params.name;
-    name.push(name);
+    name.push(names);
     res.send(JSON.stringify(names));
     
 });
