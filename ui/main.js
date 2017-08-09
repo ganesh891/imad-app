@@ -51,7 +51,7 @@ submit.onclick = function()
 
 
 
-var submit = document.getElementById('submit_btn');
+var submit = doc.getElementById('submit_btn');
 submit.onclick = function()
 {
      var nameInput = document.getElementById('name');
@@ -70,7 +70,7 @@ submit.onclick = function()
                      {
                         list += '<li>' + names[i] + '</li>';
                      }
-           var ul = doc.getElementById('namelist');
+           var ul = document.getElementById('namelist');
            ul.innerHTML = list;
             }
         }
