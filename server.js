@@ -160,8 +160,8 @@ app.get('/test-db', function(req,res){
 var names=[];
 app.get('/submit-name/:name', function (req, res)
 { 
-    var name= res.params.name;
-    name.push(names);
+    var name= req.params.name;
+    name.push(name);
     res.send(JSON.stringify(names));
     
 });
