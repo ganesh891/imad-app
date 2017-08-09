@@ -60,7 +60,7 @@ submit.onclick = function()
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
-        if (request.readyState === XMLHttRequest.DONE){
+        if (request.readyState === XMLHttpRequest.DONE){
             
             if(reuest.Status===200)
             {
