@@ -33,6 +33,7 @@ var articleone=
                 </p>`
     
 };
+
  function createTemplate(data){
      var title= data.title;
      var date= data.date;
@@ -40,7 +41,7 @@ var articleone=
      var content = data.content;
      
      
-var htmltemplate = `
+var htmlTemplate = `
 <html>
     <head>
         <title>${title} </title>
