@@ -157,7 +157,7 @@ app.get('/test-db', function(req,res){
 });
 
 
-var names=[];
+var name=[];
 app.get('/submit-name/:name', function (req, res)
 { 
     var name= res.params.name;
