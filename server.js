@@ -22,7 +22,7 @@ articleone :{
     title: 'articleone',
     heading: 'Articleone',
     date: '4 aug 2017',
-    content: `   <p> 
+    content: `<p> 
                     This is a First content that we are served here and i am going to use a module on it 
                 </p>
                 <p>
