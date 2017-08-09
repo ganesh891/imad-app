@@ -124,14 +124,7 @@ app.get('/', function (req, res) {
 });
 
 
-var names=[];
-app.get('/submit-name/:name', function(req,res)
-{ 
-    var name= res.query.name;
-    name.push(name);
-    res.send(JSON.stringify(names));
-    
-});
+
 
 var counter=0;
 app.get('/counter', function(req,res)
@@ -163,6 +156,15 @@ app.get('/test-db', function(req,res){
     });
 });
 
+
+var names=[];
+app.get('/submit-name/:name', function(req,res)
+{ 
+    var name= res.query.name;
+    name.push(name);
+    res.send(JSON.stringify(names));
+    
+});
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
