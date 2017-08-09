@@ -51,7 +51,7 @@ submit.onclick = function()
 
 
 
-var submit = doc.getElementById('submit_btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function()
 {
      var nameInput = document.getElementById('name');
