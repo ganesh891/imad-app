@@ -54,7 +54,7 @@ submit.onclick = function()
 var submit = document.getElementById('submit_btn');
 submit.onclick = function()
 {
-     var nameInput = doc.getElementById('name');
+     var nameInput = document.getElementById('name');
      var name = nameInput.value;
     var request = new XMLHttpRequest();
     
@@ -70,7 +70,7 @@ submit.onclick = function()
                      {
                         list += '<li>' + names[i] + '</li>';
                      }
-           var ul = document.getElementById('namelist');
+           var ul = doc.getElementById('namelist');
            ul.innerHTML = list;
             }
         }
