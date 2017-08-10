@@ -122,15 +122,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var names=[];
-app.get('/submit-name', function (req, res)
-{ 
-    var name= req.query.name;
-    names.push(name);
-    res.send(JSON.stringify(names));
-    
-});
-
 
 var pool = new Pool(config);
 app.get('/testdb', function(req,res){
@@ -146,6 +137,19 @@ app.get('/testdb', function(req,res){
         }
     });
 });
+
+
+var names=[];
+app.get('/submit-name', function (req, res)
+{ 
+    var name= req.query.name;
+    names.push(name);
+    res.send(JSON.stringify(names));
+    
+});
+
+
+
 
 
 var counter=0;
