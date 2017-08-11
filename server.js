@@ -174,8 +174,8 @@ app.get('/counter', function(req,res)
        //articleName =article-one
        //articles[articlesname]={}
        
-       pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function(err,result)
-      //pool.query("SELECT * FROM article where title = '" + req.params.articleName + "'" , function(err,result)
+       //pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function(err,result)
+      pool.query("SELECT * FROM article where title = '" + req.params.articleName + "'" , function(err,result)
        {
            if(err)
            {
