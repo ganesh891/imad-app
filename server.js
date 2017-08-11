@@ -175,8 +175,7 @@ app.get('/counter', function(req,res)
        //articles[articlesname]={}
        
        pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function(err,result)
-      //pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'" , function(err,result)
-       {
+      {
            if(err)
            {
                res.status(500).send(err.toString());
@@ -191,7 +190,7 @@ app.get('/counter', function(req,res)
                else
                {
                    var articleData = result.rows[0];
-                   res.send(CreateTemplate(articleData));
+                   res.send(createTemplate(articleData));
                }
            }
        });
