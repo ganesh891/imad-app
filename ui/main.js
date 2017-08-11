@@ -54,14 +54,12 @@ submit.onclick = function()
 var submit = document.getElementById('submit_btn');
 submit.onclick = function()
 {
-     var nameInput = document.getElementById('name');
-     var name = nameInput.value;
-    var request = new XMLHttpRequest();
+     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
         if (request.readyState === XMLHttpRequest.DONE){
             
-            if(request.Status===200)
+            if(request.status===200)
             {
                 var names =request.responseText;
                 names = JSON.parse(names);
@@ -75,9 +73,9 @@ submit.onclick = function()
             }
         }
     };
-    
-   
-    request.open('GET','http://ganeshwizard777.imad.hasura-app.io/submit-name?name='+name, true);
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
+   request.open('GET','http://ganeshwizard777.imad.hasura-app.io/submit-name?name=' + name, true);
     request.send(null);
     
  };
