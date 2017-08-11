@@ -168,7 +168,7 @@ app.get('/counter', function(req,res)
    });
 */
 
-   app.get('/articles/:articlename', function(req,res)
+   app.get('/articles/:articleName', function(req,res)
    {  
        
        //articleName =article-one
