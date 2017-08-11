@@ -103,7 +103,7 @@ var htmlTemplate = `
             <hr/>
             <h3>${heading}</h3>
             
-            <div>${date}</div>
+            <div>${date.toString}</div>
             
             <div>
               ${content}
