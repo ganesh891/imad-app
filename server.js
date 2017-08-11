@@ -185,7 +185,7 @@ app.get('/counter', function(req,res)
            {
                if(result.rows.length===0)
                {
-                   res.status(404).Send("article not Found");
+                   res.status(404).send("article not Found");
                }else
                {
                    var articleData = result.rows[0];
