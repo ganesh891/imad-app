@@ -41,63 +41,6 @@
          }
                </script>
                </center>
-            
-            
-            
-            
-
-<script>
-var canvas=document.getElementById("madi");
-var ctx=canvas.getContext('2d');
-canvas.width=500;
-canvas.height=500;
-canvas.style.border="1px solid black";
-var keypressed=true;
-var img=new Image();
-img.src="madi.png";
-function grass(x,y){
-   this.x=x;
-   this.y=y;
-   this.image=img;
-
-}
-
-grass.prototype.draw=function(){
-     ctx.drawImage(this.image,this.x,this.y);
-}
-grass.prototype.hop=function(){
-
-   this.y-=200;
- keypressed=false;
-}
-grass.prototype.fall=function(){
-  this.y+=200;
-keypressed=true;
-
-}
-var grass1=new grass(30,450);
-grass1.draw();
-document.addEventListener('keydown',function(e){
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-       if(keypressed && e.keyCode=='38'){
-
-       grass1.hop();
-
-
-       }
-       if(grass1.y<0){
-       return false;
-       }else{
-       grass1.draw(grass1.x,grass1.y);
-        }
-},false);
-</script>
-            
-            
-            
-            
-            
-            
         </div>
       </div>
         <script type="text/javascript" src="/ui/main.js">
