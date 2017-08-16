@@ -21,7 +21,7 @@ img.onclick = function(){
 
 //counter
 
-/*var button = document.getElementById('counter');
+var button = document.getElementById('counter');
 var counter =0;
 button.onclick =function()
 {
@@ -48,11 +48,11 @@ button.onclick =function()
     };
    request.open('GET','http://ganeshwizard777.imad.hasura-app.io/counter' , true);
     request.send(null);
-};*/
+};
 
 //submit a button
 
-/*var nameInput = document.getElementById('name');
+var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 
@@ -67,7 +67,7 @@ submit.onclick = function()
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;
 };
-*/
+
 
 
 var submit = document.getElementById('submit_btn');
