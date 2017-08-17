@@ -24,7 +24,7 @@ img.onclick = function(){
 function loadLoginForm () {
     var loginHtml = `
         <h3>Login/Register the user details</h3>
-        USERNAME:<input type="text" id="username" placeholder="username" />
+        USERNAME:<input type="text" id="username" placeholder="username" /><br>
         PASSWORD:<input type="password" id="password" />
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
