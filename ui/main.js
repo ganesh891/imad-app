@@ -24,8 +24,8 @@ img.onclick = function(){
 function loadLoginForm () {
     var loginHtml = `
         <h3>Login/Register the user details</h3>
-        <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" />
+        USERNAME:<input type="text" id="username" placeholder="username" />
+        PASSWORD:<input type="password" id="password" />
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
@@ -138,9 +138,9 @@ function loadArticles () {
                 var content = '<ul>';
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                    content += `<li>
+                    content += `<center><li>
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;
+                    (${articleData[i].date.split('T')[0]})</li></center>`;
                 }
                 content += "</ul>";
                 articles.innerHTML = content;
