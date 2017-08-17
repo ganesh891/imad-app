@@ -212,7 +212,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
-                                res.status(200).send('Comment inserted!')
+                                res.status(200).send('Comment inserted!');
                             }
                         });
                 }
@@ -229,7 +229,7 @@ app.get('/articles/:articleName', function(req,res)
        //articleName =article-one
        //articles[articlesname]={}
        
-       pool.query("SELECT * FROM articles1 WHERE title = $1", [req.params.articleName], function(err,result)
+       pool.query("SELECT * FROM articles WHERE title = $1", [req.params.articleName], function(err,result)
       {
            if(err)
            {
