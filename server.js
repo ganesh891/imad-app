@@ -196,7 +196,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
         // First check if the article exists and get the article-id
-        pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+        pool.query('SELECT * from article1 where title = $1', [req.params.articleName], function (err, result) {
             if (err) {
                 res.status(500).send(err.toString());
             } else {
@@ -229,7 +229,7 @@ app.get('/articles/:articleName', function(req,res)
        //articleName =article-one
        //articles[articlesname]={}
        
-       pool.query("SELECT * FROM articles WHERE title = $1", [req.params.articleName], function(err,result)
+       pool.query("SELECT * FROM articles1 WHERE title = $1", [req.params.articleName], function(err,result)
       {
            if(err)
            {
