@@ -1,9 +1,32 @@
+console.log('loaded!');
+
+var element = document.getElementById('main-text');
+
+element.innerHTML='New Value';
+
+
+var img= document.getElementById('madi');
+
+var marginLeft = 0;
+function moveRight()
+{
+    marginLeft = marginLeft + 1;
+    img.style.marginLeft = marginLeft + 'px';
+}
+img.onclick = function(){
+    var interval= setInterval(moveRight, 50);
+    
+};
+
+
+//login form
 
 function loadLoginForm () {
     var loginHtml = `
-        <h3>Login/Register to unlock awesome features</h3>
-        <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" />
+        <h3>Login/Register the user details</h3>
+        USERNAME:<input type="text" id="username" placeholder="username" />
+        <br><hr>
+        PASSWORD:<input type="password" id="password" />
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
@@ -11,6 +34,7 @@ function loadLoginForm () {
     document.getElementById('login_area').innerHTML = loginHtml;
     
     // Submit username/password to login
+    
     var submit = document.getElementById('login_btn');
     submit.onclick = function () {
         // Create a request object
@@ -119,10 +143,10 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "</ul>"
+                content += "</ul>";
                 articles.innerHTML = content;
             } else {
-                articles.innerHTML('Oops! Could not load all articles!')
+                articles.innerHTML('Oops! Could not load all articles!');
             }
         }
     };
@@ -137,3 +161,83 @@ loadLogin();
 
 // Now this is something that we could have directly done on the server-side using templating too!
 loadArticles();
+
+//counter
+
+var button = document.getElementById('counter');
+var counter =0;
+button.onclick =function()
+{
+    counter= counter+1;
+var span = document.getElementById('count');
+span.innerHTML = counter.toString();
+};
+
+var button = document.getElementById('counter');
+
+button.onclick =function()
+{
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function()
+    {
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.status ===200)
+            {
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
+   request.open('GET','http://ganeshwizard777.imad.hasura-app.io/counter' , true);
+    request.send(null);
+};
+
+//submit a button
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+
+submit.onclick = function()
+{
+    var names =['name1','name2','name3','name4'];
+    var list ='';
+    for(var i=0; i<names.length;i++)
+    {
+        list += '<li>' + names[i] + '</li>';
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
+};
+
+
+
+var submit = document.getElementById('submit_btn');
+submit.onclick = function()
+{
+     var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+        if (request.readyState === XMLHttpRequest.DONE){
+            
+            if(request.status===200)
+            {
+                var names =request.responseText;
+                names = JSON.parse(names);
+                var list ='';
+              for(var i=0; i<names.length; i++)
+                     {
+                        list += '<li>'+names[i]+'</li>';
+                     }
+           var ul = document.getElementById('namelist');
+           ul.innerHTML = list;
+            }
+        }
+    };
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
+   request.open('GET','http://ganeshwizard777.imad.hasura-app.io/submit-name?name=' + name, true);
+    request.send(null);
+    
+ };
